@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Link Workshop</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: linear-gradient(135deg,#e3e3e3,#c9c9c9);
+    line-height:1.6;
+}
+
+.container{
+    width:1200px;
+    max-width:95%;
+    margin:40px auto;
+}
+
+/* Header */
+.header{text-align:center;color:#4a148c;}
+.sub-header{text-align:center;color:#6a1b9a;margin-bottom:30px;}
+
+/* Cards */
+.card1{
+    background:#fff;
+    padding:25px;
+    border-radius:14px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* Grid for 1–4 */
+.grid-1-4{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    margin-bottom:30px;
+}
+
+@media(max-width:768px){
+    .grid-1-4{
+        grid-template-columns:1fr;
+    }
+}
+
+.card2{
+    background:#f5f6fa;
+    margin-top:15px;
+    padding:15px;
+    border-radius:10px;
+    border:1px solid #ccc;
+}
+
+/* Colors */
+.color-1{border-top:6px solid #8e24aa;}
+.color-2{border-top:6px solid #fbc02d;}
+.color-3{border-top:6px solid #43a047;}
+.color-4{border-top:6px solid #f4511e;}
+.color-5{border-top:6px solid #e53935;}
+.color-6{border-top:6px solid #d81b60;}
+
+/* Link Box */
+.link-box{
+    margin:12px 0;
+    padding:12px;
+    background:#fff;
+    border-radius:8px;
+    border-left:6px solid #5e35b1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+}
+
+a{color:#1565c0;font-weight:bold;text-decoration:none;}
+a:hover{text-decoration:underline;}
+
+pre{
+    background:#263238;
+    color:#eceff1;
+    padding:15px;
+    border-radius:10px;
+    margin:15px 0;
+    overflow-x:auto;
+}
+
+code{
+    background:#eceff1;
+    color:#c62828;
+    padding:2px 6px;
+    border-radius:6px;
+}
+
+button{
+    padding:10px 20px;
+    border:none;
+    border-radius:8px;
+    background:#5e35b1;
+    color:#fff;
+    cursor:pointer;
+}
+
+button:hover{background:#4527a0;}
+
+img{
+    border-radius:10px;
+    transition:.3s;
+}
+img:hover{transform:scale(1.05);}
+
+.note{margin-top:15px;color:#555;}
+</style>
+</head>
+
+<body>
+<div class="container">
+<h1 class="header">Workshop : Link</h1>
+<p class="sub-header">เรียนรู้ลิงก์หลายรูปแบบพร้อมตัวอย่างและแบบฝึกหัด</p>
+
+<!-- ===== 1–4 (2 Columns) ===== -->
+<div class="grid-1-4">
+
+<div class="card1 color-1">
+<h2>1. External Links</h2>
+<div class="card2">
+<div class="link-box">
+<a href="https://www.wikipedia.org" target="_blank">Visit Wikipedia</a>
+</div>
+<div class="link-box">
+<a href="https://www.google.com" target="_self">Visit Google</a>
+</div>
+</div>
+</div>
+
+<div class="card1 color-2">
+<h2>2. Internal Links & Anchor Links</h2>
+<pre>
+&lt;a href="about.html"&gt;About Us&lt;/a&gt;
+&lt;a href="#jump"&gt;Jump to Section&lt;/a&gt;
+</pre>
+<div class="link-box">
+<a href="#jump">Click to jump</a>
+</div>
+<h3 id="jump">This is the jump target</h3>
+</div>
+
+<div class="card1 color-3">
+<h2>3. Email Link</h2>
+<pre>
+&lt;a href="mailto:student@example.com"&gt;Send Email&lt;/a&gt;
+</pre>
+<div class="link-box">
+<a href="mailto:student@example.com">Send an Email</a>
+</div>
+</div>
+
+<div class="card1 color-4">
+<h2>4. Download Links</h2>
+<pre>
+&lt;a href="files/sample.txt" download&gt;Download File&lt;/a&gt;
+</pre>
+<div class="link-box">
+<a href="files/sample.txt" download>Download Text File</a>
+</div>
+</div>
+
+</div>
+
+<!-- ===== 5 ===== -->
+<div class="card1 color-5">
+    <h2>5. Button Links</h2>
+    <pre>
+&lt;button onclick="location.href='https://www.example.com'"&gt;
+Visit Website
+&lt;/button&gt;
+    </pre>
+    <div class="link-box">
+        <button onclick="location.href='https://www.example.com'">Visit Website</button>
+        <button onclick="document.location='index.html'">HTML Tutorial</button>
+    </div>
+</div>
+
+<!-- ===== 6 ===== -->
+<div class="card1 color-6">
+    <h2>6. Image Link</h2>
+    <pre>
+&lt;a href="https://youtube.com"&gt;
+&lt;img src="images/sample.jpg" width="250"&gt;
+&lt;/a&gt;
+    </pre>
+    <div class="link-box">
+        <a href="https://youtube.com" target="_blank">
+            <img src="images.jpg" width="250">
+        </a>
+    </div>
+    <p class="note">
+        หากใช้รูปของตนเอง ควรเก็บไว้ในโฟลเดอร์ <code>images/</code>
+    </p>
+</div>
+
+</div>
+</body>
+</html>
